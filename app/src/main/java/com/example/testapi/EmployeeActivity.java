@@ -55,7 +55,7 @@ public class EmployeeActivity extends AppCompatActivity {
         int age = Integer.parseInt(et2.getText().toString());
         float salary = Float.parseFloat(et3.getText().toString());
 
-        EmployeeCUD employeecud = new EmployeeCUD(name,salary,age);
+        Employee employee = new Employee(name,salary,age);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -63,7 +63,7 @@ public class EmployeeActivity extends AppCompatActivity {
                 .build();
 
         EmployeApi employeApi = retrofit.create(EmployeApi.class);
-        Call<Void> voidcall = employeApi.registeremployee(employeecud);
+        Call<Void> voidcall = employeApi.registeremployee(employee);
 
         voidcall.enqueue(new Callback<Void>() {
             @Override

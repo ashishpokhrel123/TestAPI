@@ -3,9 +3,11 @@ package com.example.testapi;
 public class Employee {
     private int id;
     private String  employee_name;
-    private String employee_salary;
-    private String employee_age;
+    private float employee_salary;
+    private int employee_age;
     private String Profile_image;
+
+
 
     public int getId() {
         return id;
@@ -23,19 +25,19 @@ public class Employee {
         this.employee_name = employee_name;
     }
 
-    public String getEmployee_salary() {
+    public float getEmployee_salary() {
         return employee_salary;
     }
 
-    public void setEmployee_salary(String employee_salary) {
+    public void setEmployee_salary(float employee_salary) {
         this.employee_salary = employee_salary;
     }
 
-    public String getEmployee_age() {
+    public int getEmployee_age() {
         return employee_age;
     }
 
-    public void setEmployee_age(String employee_age) {
+    public void setEmployee_age(int employee_age) {
         this.employee_age = employee_age;
     }
 
@@ -47,13 +49,13 @@ public class Employee {
         Profile_image = profile_image;
     }
 
-    public Employee(int id, String employee_name, String employee_salary , String employee_age, String profile_image)
+    public Employee(String employee_name, float employee_salary , int employee_age)
     {
-        this.id=id;
+
         this.employee_name=employee_name;
         this.employee_age=employee_age;
         this.employee_salary=employee_salary;
-        this.Profile_image=profile_image;
+
     }
 
 }
